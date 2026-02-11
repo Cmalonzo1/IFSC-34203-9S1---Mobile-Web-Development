@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    background-color: red;
 }
 
 body{
@@ -17,15 +18,42 @@ ul{
     
 }
 
-.bod{
-    display: flex;
-    flex-direction: flex-row;
-    align-items: center;
-    justify-content: space-between;
+.container{
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 5px;
+    padding: 10px;
+    width: 75vw;
+    height: 75vh;
 }
 
 .header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+.time{
+    grid-column-start: 4;
+}
+
+.weather{
+    grid-column-start: 4;
+    grid-row: span 3;
+}
+
+.pictures{
+    grid-column-start: 6;
+    grid-row: span 4;
+    grid-column: span 3;
+}
+
+.assignments{
+    grid-column-start: 8;
+    grid-row: span 8;
+}
+
+.border{
+    border: 2px solid black;
 }
