@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/Homepage/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="Homepage/assets/js/picture-carousel.js" defer></script>
+    <script src="Homepage/assets/js/clock.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -13,9 +23,18 @@
             <h1>Mobile Web Development</h1>
             <h2>Carson Alonzo</h2>
         </div>
-        <div class="pictures border curved">pictures</div>
+        <div class="video border curved">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/z84bmLDzIIk?si=v2HwXGvcvtlmaatg&amp;controls=0" title="YouTube video player" frameborder="0" autoplay="1" &mute="1"></iframe>
+        </div>
+        <div class="pictures border curved">
+            <img src="/Homepage/assets/img/placeholder.jpg" alt="Placeholder image"/>
+            <img src="/Homepage/assets/img/placeholder.jpg" alt="Placeholder image"/>
+            <img src="/Homepage/assets/img/placeholder.jpg" alt="Placeholder image"/>
+            <img src="/Homepage/assets/img/placeholder.jpg" alt="Placeholder image"/>
+            <img src="/Homepage/assets/img/placeholder.jpg" alt="Placeholder image"/>
+        </div>
         <div class="weather border curved">weather</div>
-        <div class="time border curved">time</div>
+        <div class="time border curved"><div id="time"></div></div>
         <div class="assignments border curved">
             <h2>Assignments</h2>
             <ul>
@@ -29,12 +48,7 @@
             </ul>
         </div>
         <div class="tw border curved">
-            <p>Thomas Wallace Webpage</p>
         </div>
     </div>
-    
-    </div>
-    <footer>
-    </footer>
 </body>
 </html>
