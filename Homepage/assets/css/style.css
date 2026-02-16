@@ -86,19 +86,22 @@ ul{
 }
 
 .assignments{
-    grid-row: 2 / 7;
+    grid-row: 2 / 5;
     grid-column: 6 / 7;
 }
 
 .assignments h2{
     display: flex;
     justify-content: center;
+    container-type: inline-size;
 }
 
 .assignments li{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: clamp(1rem, 10cqw, 1.5rem);
 }
 
 .border{
