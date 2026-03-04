@@ -1,13 +1,18 @@
 function updateClock(){
-    const now = new Date();
-    const options = {
-        weekday: 'long',
+    const time = new Date();
+
+    const currentDay = {
+        weekday: 'long'
+    };
+    const currentTime = {
         hour: 'numeric',
         minute: '2-digit',
         second: '2-digit',
         hour24: true
     };
-    const timeString = now.toLocaleString('us-chicago', options);
+    const dayString = time.toLocaleString('us-chicago', currentDay);
+    const timeString = time.toLocaleString('us-chicago', currentTime);
+    document.getElementById('day').textContent = dayString;
     document.getElementById('time').textContent = timeString;
 }
 
