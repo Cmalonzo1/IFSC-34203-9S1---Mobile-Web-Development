@@ -7,7 +7,6 @@ function updateClock(){
     const currentTime = {
         hour: 'numeric',
         minute: '2-digit',
-        second: '2-digit',
         hour24: true
     };
     const dayString = time.toLocaleString('us-chicago', currentDay);
