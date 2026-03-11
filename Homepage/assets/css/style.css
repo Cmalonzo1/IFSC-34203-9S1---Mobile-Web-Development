@@ -98,22 +98,33 @@ ul{
 }
 
 .assignments{
-    grid-row: 2 / 6;
+    grid-row: 2 / 7;
     grid-column: 6 / 7;
+    display: flex;
+    flex-direction: column;
 }
 
 .assignments h2{
     display: flex;
     justify-content: center;
-    container-type: inline-size;
 }
 
-.assignments li{
+.assignments ul{
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: space-around;*/
+    list-style: none;
+}
+
+.assignments ul li{
     text-align: center;
-    font-size: clamp(1rem, 10cqw, 1.5rem);
+    align-content: center;
+    background-color: blue;
+    border: 2px solid black;
+    margin: 0;
+    padding: 10px;
+    text-size-adjust: 100%;
 }
 
 .border{
