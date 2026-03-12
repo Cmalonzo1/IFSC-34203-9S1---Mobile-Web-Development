@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Sun" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient);
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+        stroke-width: 6px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="13.02" y1="275.35" x2="447.9" y2="275.35" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffe7a3"/>
+      <stop offset=".5" stop-color="#ffca05"/>
+      <stop offset="1" stop-color="#faac18"/>
+    </linearGradient>
+  </defs>
+  <path class="st0" d="M362.5,431.69c-134.45,0-243.45-107.76-243.45-240.69,0-56.14,19.44-107.78,52.02-148.72C78.75,76.48,13.02,164.51,13.02,267.73c0,132.93,109,240.69,243.45,240.69,77.67,0,146.85-35.97,191.43-91.97-26.57,9.84-55.35,15.24-85.4,15.24Z"/>
+</svg>
