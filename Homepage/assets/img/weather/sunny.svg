@@ -7,14 +7,14 @@
         fill: url(#linear-gradient);
         stroke: #231f20;
         stroke-miterlimit: 10;
-        stroke-width: 6px;
+        stroke-width: 10px;
       }
     </style>
-    <linearGradient id="linear-gradient" x1="13.02" y1="267.73" x2="499.91" y2="267.73" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient" x1="13.02" y1="246.31" x2="499.92" y2="246.31" gradientTransform="translate(0 512) scale(1 -1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#ffe7a3"/>
       <stop offset=".5" stop-color="#ffca05"/>
       <stop offset="1" stop-color="#faac18"/>
     </linearGradient>
   </defs>
-  <ellipse class="st0" cx="256.47" cy="267.73" rx="243.45" ry="240.69"/>
+  <ellipse class="st0" cx="256.47" cy="265.69" rx="243.45" ry="240.69"/>
 </svg>
