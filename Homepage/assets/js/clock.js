@@ -5,12 +5,13 @@ function updateClock(){
         weekday: 'long'
     };
     const currentTime = {
+        timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         hour: 'numeric',
         minute: '2-digit',
-        hour24: true
+        hour12: true
     };
-    const dayString = time.toLocaleString('us-chicago', currentDay);
-    const timeString = time.toLocaleString('us-chicago', currentTime);
+    const dayString = time.toLocaleString(undefined, currentDay);
+    const timeString = time.toLocaleString(undefined, currentTime);
     document.getElementById('day').textContent = dayString;
     document.getElementById('time').textContent = timeString;
 }
