@@ -112,6 +112,7 @@ ul{
 }
 
 .assignments{
+    
     grid-row: 2 / 7;
     grid-column: 6 / 7;
     display: flex;
@@ -124,8 +125,9 @@ ul{
 }
 
 .assignments ul{
-    display: grid;
-    grid-template-rows: repeat(7,1fr);
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
     list-style: none;
 }
 
@@ -133,9 +135,11 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: green;
-    margin: 0;
     text-align: center;
+    background-color: green;
+    max-height: 40%;
+    font-size: clamp();
+    
 }
 
 .border{

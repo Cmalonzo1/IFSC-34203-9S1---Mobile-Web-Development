@@ -10,10 +10,6 @@ timeCache = localStorage.getItem('time');
 const currentTime = Date.now();
 */
 
-const weatherCodes = {
-
-}
-
 async function fetchWeather(latitude, longitude) {
     /*const url = url_imperial; */
     
@@ -33,6 +29,14 @@ async function fetchWeather(latitude, longitude) {
 
 
 navigator.geolocation.getCurrentPosition((position) => {
+
     const {latitude, longitude} = position.coords;
+    localStorage.setItem('geoLocation', JSON.stringify({latitude, longitude}));
+
     fetchWeather(latitude, longitude);
-});
+
+}, (error) => {
+    console.error('User denied access to geolocation. Displaying current campus weather');
+    fetchWeather(34.7253, -92.3379);
+}
+); 
