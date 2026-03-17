@@ -1,16 +1,25 @@
+:root{
+    --black: #0D0D0D;
+    --dark-blue: #182240;
+    --indigo: #232B59;
+    --brown: #BF948A;
+    --lighter-brown: #8C5D58;
+}
+
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Google Sans', 'Arial', 'Times New Roman';
+    font-family: 'Rubik', 'Arial', 'Times New Roman';
+    color: white;
 }
 
 body{
-    /* background: linear-gradient(#110016, #1A0129, #220135); */
+    /*background-color: #0D0D0D;*/
+    background-color: red;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(143, 1, 1);
 }
 
 ul{
@@ -112,11 +121,11 @@ ul{
 }
 
 .assignments{
-    
     grid-row: 2 / 7;
     grid-column: 6 / 7;
     display: flex;
     flex-direction: column;
+    padding: 5px;
 }
 
 .assignments h2{
@@ -126,23 +135,34 @@ ul{
 
 .assignments ul{
     display: flex;
-    gap: 1rem;
+    flex-grow: 1;
     flex-direction: column;
     list-style: none;
+    justify-content: space-around;
 }
 
-.assignments ul li{
+.assignments li{
+    box-sizing: border-box;
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: green;
-    max-height: 40%;
-    font-size: clamp();
-    
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.assignments li:hover{
+    transition: 0.4s;
+    box-shadow: 1px 2px 7px black;
+}
+
+a{
+    text-decoration: none;
 }
 
 .border{
-    border: 2px solid black;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 

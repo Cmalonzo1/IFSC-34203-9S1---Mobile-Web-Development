@@ -11,12 +11,14 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="Homepage/assets/js/picture-carousel.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="Homepage/assets/js/lucide.js" defer></script>
     <script src="Homepage/assets/js/clock.js" defer></script>
-    <script src="Homepage/assets/js/weather.js" defer></script>
+    <!--<script src="Homepage/assets/js/weather.js" defer></script>-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
 
 <body>
     <div class="container">
@@ -38,8 +40,8 @@
             <img src="/Homepage/assets/img/placeholder.jpg" alt="Placeholder image"/>
         </div>
         <div class="weather border curved">
-            <img class="weather-icon" src="/Homepage/assets/img/weather/sunny.svg"/>
-            <p id="temperature"></p>
+            <i data-lucide="sun"></i> <!--class="weather-icon" -->
+            <p id="temperature">NaN</p>
         </div>
         <div class="time border curved">
             <div id="day"></div>
@@ -48,13 +50,12 @@
         <div class="assignments border curved">
             <h2>Assignments</h2>
             <ul>
-                <li><a href="pre-assessment/index.html">Prototype HTML Assignment</a></li>
-                <li>CSS Diner (EC)</li>
-                <li>CSS Grid Garden</li>
-                <li>Flexbox Froggy</li>
-                <li>CSS Demo</li>
-                <li>Positioning Lab</li>
-                <li>Grid Lab</li>
+                <li><a href="pre-assessment/index.html">Pre-Assessment Lab</a></li>
+                <li><a href="#">Boilerplate Homepage</a></li>
+                <li><a href="#">CSS Grid Resume</a></li>
+                <li><a href="#">CSS Grid Examples</a></li>
+                <li><a href="#">Mobile-First Resume</a></li>
+                <li><a href="#">Final Project</a></li>
             </ul>
         </div>
         <div class="tw border curved">
@@ -62,5 +63,4 @@
         </div>
     </div>
 </body>
-<footer><p id="error"></p></footer>
 </html>
