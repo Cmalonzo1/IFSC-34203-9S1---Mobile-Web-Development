@@ -20,6 +20,7 @@ async function fetchWeather(latitude, longitude) {
     }
 }
 
+/*
 navigator.geolocation.getCurrentPosition((position) => {
 
     const {latitude, longitude} = position.coords;
@@ -31,3 +32,6 @@ navigator.geolocation.getCurrentPosition((position) => {
     fetchWeather(34.7253, -92.3379);
 }
 ); 
+*/
+
+fetchWeather(34.7253, -92.3379);
