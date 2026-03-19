@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let streak = document.createElement('div');
         streak.classList.add('streak');
 
-        let widths = [(innerWidth / 2), ];
+        let widths = [(innerWidth / 2), (innerWidth / 4)];
         let streakWidth = innerWidth / 4;
         let streakHeight = 30;
 

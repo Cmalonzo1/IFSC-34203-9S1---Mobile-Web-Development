@@ -2,9 +2,9 @@ $(document).ready(function(){
     $('.pictures').slick({
         autoplay: true,
         infinite: true,
-        prevArrow: 'hide',
-        nextArrow: 'hide',
-        speed: 3000,
+        prevArrow: 'show',
+        nextArrow: 'show',
+        speed: 1000,
         cssEase: 'ease-in-out'
     });
 });
