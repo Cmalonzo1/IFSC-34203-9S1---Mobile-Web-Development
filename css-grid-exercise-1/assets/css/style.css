@@ -4,6 +4,7 @@
     font-family: 'Arial', 'Times New Roman';
 }
 
-body{
-    background-color: #f4f4f4;
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
