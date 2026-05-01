@@ -2,10 +2,10 @@ url_imperial = 'https://api.open-meteo.com/v1/forecast?latitude=34.7253&longitud
 
 url_metric = 'https://api.open-meteo.com/v1/forecast?latitude=34.7253&longitude=-92.3379&current=weather_code,temperature_2m,cloud_cover,is_day&timezone=America%2FChicago&forecast_days=1&forecast_hours=1&past_hours=1';
 
-const expirationTime = 10;
-Cookies.set('username', 'John', {expires: 10, path: '/', secure: true, sameSite: 'Lax'});
+tenSeconds = 10/86400;
+Cookies.set('username', 'John', {expires: tenSeconds});
 console.log(`Cookie ${Cookies.get('username')} created. Will expire in 5 seconds.`);
-
+Cookies.
 
 
 const temp = document.getElementById('temperature');
