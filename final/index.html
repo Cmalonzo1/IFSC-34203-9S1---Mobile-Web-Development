@@ -5,18 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="favicon" type="image/png" href="assets/img/w101-favicon.png">
-    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
+    <!--fonts-->
+    <link href="https://fonts.cdnfonts.com/css/shermlock" rel="stylesheet">
+    <!--css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--external scripts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="assets/js/splide.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul id="nav-left">
                 <li><img id="w101-logo" src="assets/img/w101-logo.png" alt="Logo"></li>
-                <li>Home</li>
-                <li>About</li>
+                <li><a href="index.html">Home</a></li>
                 <li>News</li>
-                <li>Store</li>
+                <li><a href="https://kingsislestore.com/" target="_blank">Store</a></li>
             </ul>   
             <ul id="nav-right">
                 <li>Terms</li>
@@ -28,12 +34,328 @@
     </header>
     <content>
         <section id="hero">
-            <img src="assets/img/w101-banner.jpg" alt="w101-banner">
+            <p>PLAY FOR FREE NOW</p>
+            <button id="download-button">Download</button>
         </section>
-        <section id="choose-school"></section>
-        <section id="explore-spiral"></section>
-        <section id="meet-community"></section>
-        <section id="tech-forge"></section>
+        <section id="choose-school">
+            <!--It's a section that pulls up a modal and displays information about the selected school
+            
+            When you get home pull up wizard101 and get a screenshot of the inside of Gamma's room and use it as the background for this section
+            -->
+            <h2 class="section-title">Choose Your School</h2>
+            <div id="schools">
+                <button class="modal"><img src="assets/img/fire.png" alt="fire-icon"></button>
+                <button class="modal"><img src="assets/img/ice.png" alt="ice-icon"></button>
+                <button class="modal"><img src="assets/img/storm.png" alt="storm-icon"></button>
+                <button class="modal"><img src="assets/img/death.png" alt="death-icon"></button>
+                <button class="modal"><img src="assets/img/life.png" alt="life-icon"></button>
+                <button class="modal"><img src="assets/img/myth.png" alt="myth-icon"></button>
+                <button class="modal"><img src="assets/img/balance.png" alt="balance-icon"></button>    
+            </div>
+        </section>
+        <section id="explore-spiral">
+            <!--
+            Use the spiral as a background
+
+            It'll be a carousel that lists and shows the different worlds in the spiral. Make a list on the side that allows you to select a different area.
+            -->
+            <h2 class="section-title">Explore the Spiral</h2>
+            <div class="worlds">
+                <ul class="splide">
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Wizard City</h2>
+                            <p>Wizard City is at the center of all things.<br><br>
+                                The entire city has sprouted up around Bartleby, the World Tree. Bartleby protects all worlds by eternally maintaining a connection to them along the Spiral.<br><br>
+                                Wizard City is home to the Ravenwood School of Magical Arts and its esteemed faculty of renowned Wizards. All Wizards get their start in learning about magic and choosing a specific class at this historic institution.<br><br>
+                                Recently, a shadow has crept over Wizard City and Merle Ambrose, Headmaster of Ravenwood, has begun his search to find courageous young Wizards who can save Wizard City.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Krokotopia & Selenopolis</h2>
+                            <p>Krokotopia is an ancient land of forgotten treasures.<br><br>
+                            In this place, deserts surround the life-giving oasis in the shadow of towering pyramids. Krokotopia was once home to the Kroks, and it is rumored the Kroks have re-awakened and enslaved the Manders.<br><br>
+                            Occasionally, the canines of Marleybone can be seen here excavating ruins in search of artifacts for their museums.<br><br>
+                            The dust settled after the War on Novus, the Cabal and Arcanum are finally looking to mend their differences. But the first thing they discover as they start working together is a series of abductions. Different people, different worlds, different culprits – all unified by one thing, one single thread: You. The friends of the Wizard are disappearing, and all signs say they're being taken to Selenopolis.<br><br>
+                            Long ago, Selenopolis was founded by the mysterious Khonsu on the site of the unique magical convergence of the Blended Grove. Here, his Mander Lunamaries were protected from the invasive Kroks by the power of the Moon. But, like the Moon that shields it, Selenopolis has a hidden dark side; and it is in those shadows old threats lurk, waiting to strike back at the one who defeated them all, waiting for their chance… at vengeance.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Marleybone</h2>
+                            <p>Marleybone is the home of dogs, cats, and proper manners.<br><br>
+                            The city has all the trappings of a modern society built upon scientific foundations. Big Ben, Scotland Yard, and the Royal Museum are some of the most famous sights in Marleybone.<br><br>
+                            Beware in Marleybone at night where the name "Meowiarty" is whispered in hushed tones. It is also rumored that roving cat gangs litter the rooftops and steal many of the city's precious valuables.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Mooshu</h2>
+                            <p>MooShu is a beautiful land with a rich, deep history.<br><br>
+                            Full cherry trees, carefully maintained gardens, and tall mountains can be found everywhere. Although this is a place of knowledge and tradition, there is a great mystery here.<br><br>
+                            It is home to both the honorable samoorai as well as the sneaky ninja pigs. For some time, there has been peace. Recently though, the Emperor has taken ill and the ninja pig clans have risen again to stir up trouble in MooShu.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Dragonspyre</h2>
+                            <p>Dragonspyre is an ancient, haunted world in which renegade professor Malistaire has recently been spotted!<br><br>
+                            Once an advanced militant society, Dragonspyre had an esteemed Academy rivaling that of the Ravenwood School of Magical Arts in Wizard City. The inhabitants once held a special interest in Fire Magic.<br><br>
+                            Legend has it that in the summoning of a great Dragon Titan, the world was destroyed and changed forever. Its great buildings and stone columns crumbled before the coming of the Dragon Titan.<br><br>
+                            Now, it has become a land of fire, lava, and ghosts.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Celestia</h2>
+                            <p>Long ago, the Astral Wizards of Celestia created powerful magic using the energy of the Stars, the Moon, and the Sun. The sorceress Morganthe, a Queen of the Shadow Web, wanted the secrets of the Celestian magic at all costs. The Celestians refused her, so she raised a Dark Army and sent it against Celestia. After decades of battle, the Astral Wizards realized their world would fall. They summoned the Storm Titan to defeat Morganthe's legions and to take their world to a place of safety.<br><br>
+                            The Storm Titan betrayed the Celestians by sinking their world beneath the Waves along with Morganthe's invading forces. Realizing they were doomed, the Celestians raised mighty Domes to protect some of their treasured city from the waves, though it was too late! They perished along with Morganthe's invading army. Celestia was lost to the Spiral, its Spiral Door closed forever.<br><br>
+                            Centuries later, a team of brave explorers from the Spiral Geographic Society, led by Sir Thurston Plunkett, re-discovered Celestia. They landed with an Air-Ship and built Exploratory Undersea Domes to explore Celestia's ruins. Plunkett and his fellow explorers soon realized that Celestia was now inhabited by a strange new culture... the Crustacean Empire. Unfortunately, the explorers did not come alone to Celestia. Morganthe's followers, the Shadow Weavers, stand ready to take Celestia's magic for their Queen.<br><br>
+                            After receiving the Spiral Geographic Society's Distress Call, Headmaster Merle Ambrose of the Ravenwood School for Magic seeks any young Wizards brave enough to journey to the undersea world of Celestia and discover the secrets of its Lost Magic. Players who are a minimum of level 48 and who have completed the quest "The Final Countdown" in Dragonspyre will be called upon to explore Celestia.<br><br>
+                            What will you find there?</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Grizzleheim & Wintertusk</h2>
+                            <p>Inspired by Norse mythology, Grizzleheim & Wintertusk are airy, outdoor landscapes of snowy mountains, glacial ridges and towering trees that are home to three Wizard101 tribes - Bears, Wolves and Ravens.<br><br>
+                            Players will first encounter the Viking Bears of Grizzleheim, great traders with the ability to travel the worlds of the Spiral, in the free-to-play zones of Wizard City.<br><br>
+                            As student wizards adventure through subsequent worlds, Grizzleheim & Wintertusk will offer new quests, new locations to explore, new opponents and new Viking-themed decorative housing items interspersed throughout the mid and higher levels of the game.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Zafaria</h2>
+                            <p>When a group of Ravenwood students go missing on a class field trip, Wizards are summoned to Zafaria! Wizards discover that high tensions run throughout Zafaria, as ancient tribes clash over territory and resources, while Morganthe's agents sow the seeds of chaos. As war threatens to sweep over the grasslands and penetrate deep into the jungles, Morganthe plots to recover the heart of her lost power, and fulfill the words of prophecy.<br><br>
+                            Long ago Zafaria was the home of Morganthe, but a Council of Wizards broke her power and buried her wand. They thought her dead until her recent reappearance. The world of ZAFARIA is old, but until recently has been cut off from the Spiral. It is a world of endless grasslands; dense, colorful jungles; and spectacular vistas. Baobab is the spiritual and cultural center of the world – a city built in and around the eponymous Tree of Life.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Avalon</h2>
+                            <p>Avalon is a world full of wonder and history. Who's history in particular? Why, Ravenwood's very own Merle Ambrose came from Avalon! With lush green trees and mythical creatures, it seems like nothing could go wrong in this beautiful world... but Morganthe has trouble brewing.<br><br>
+                            In a quest to secure the Sword of Kings, the legendary blade of Avalon once held by King Artorius, your Wizard must face Morganthe's minions. Along the way meet witches, knights and more creatures in the woods of Avalon in your journey to save the Spiral.<br><br>
+                            Run through the deep faerie forest of Weirwood and be sure you keep an eye on the Froudlings. There are surprises around every turn in Avalon, but Morganthe has her eye on you. Maybe your Wizard will finally get the Morganthe showdown that you've been hoping for?</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Azteca</h2>
+                            <p>Ten years ago a great comet appeared in the sky over Azteca, one of the oldest islands in the Spiral, a fragment of the First World. The comet panicked the Aztecosaurs and drove them to seek shelter in their underground mines. Most in the Spiral assumed Azteca was destroyed.<br><br>
+                            But Morganthe is drawn here to uncover the final secrets of Astral magic, the "primal Spiral" as it were. If she masters it, she can rewrite the words to the Song of Creation, and rebuild the Spiral into her own image.<br><br>
+                            In order to do so, she needs to hear the Song from the source – she must raise the oldest Aztecosaurs – the nine Lords of the Night – from the grave. But she needs help. Her first task is to learn just enough Aztecosaur Necromancy to bring someone back from the dead, after a fashion.<br><br>
+                            Wizards arrive to find the Aztecosaur City of Three Winds in chaos. The great pyramid has been damaged and taken over by the Umbra Legion. Undead threaten to billow up from the underground tombs and mines. A new, untested king sits on the throne. The Aztecosaurs blame the Avians (and in some cases, each other) for each crisis. And the comet still burns in the sky, portending doom!</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Khrysalis</h2>
+                            <p>Still confident from her victory in Azteca, Morganthe has chained the souls of the oldest Aztecosaurs and dragged them to her place of power, the world of Khrysalis. They are teaching her Bartleby's primal song, which will allow her to rewrite the Spiral in her image.<br><br>
+                            The Council of Light, that ancient assembly under the leadership of Merle Ambrose, knows it has precious little time to act. Ambrose gathers what is left of the council – the Emperor of MooShu, Diego the Duelmaster and Lydia Greyrose – and they come up with a desperate plan: arm the Wizards and send them into the spider's fangs. The call to action is now!<br><br>
+                            Morganthe has created an eldritch ward to hold back her ancient enemies. But the Council of Light believes the heroic Wizards can use trickery and willpower to slip through her defenses, in their last, best hope to shatter her plans.<br><br>
+                            The Wizards travel to a small Spiral island, a fragment of a broken world lost to time. From the edge of this island, one can see the dark swirl of Khrysalis. The Wizards will explore Morganthe's world, searching for ways to disrupt her power, helping those pinned down under the weight of her tyranny, and learning the secrets of her magic in order to have a chance of restoring the Spiral.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Polaris</h2>
+                            <p>The heroic defeat of Morganthe in Khrysalis saved the Spiral and earned the Wizard great honors, but it also allowed an ancient and powerful evil to resurface.<br><br>
+                            When an icy wind from far away chills Bartleby right down to his roots, the Wizard must journey to the place where "the Land meets the Sky", the frozen world of Polaris. There, the Wizard sets out to find the mysterious witch, Baba Yaga, and soon gets drawn into a revolution against the tyrannical Walrusk Empire.<br><br>
+                            Ultimately, it becomes clear that dark forces are at work behind the scenes, engaged in an evil plot that threatens far more than just Polaris. Teaming up with a former circus strongman and a young witch, the Wizard must journey to the farthest reaches of Polaris, for a spectacular showdown with a threat unlike any other in Wizard101.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Mirage</h2>
+                            <p>It seems a lifetime ago that Malistaire stole the Eye of History from Grandfather Tree in Ravenwood, but as the Tree's condition worsens, Bartleby himself suggests that recovering the Eye may be his best hope.<br><br>
+                            Upon learning that a shadowy "Cabal" took the Eye to the world of Mirage, the Wizard must journey to this land of shifting sands and shifting allegiances, where the Dromel Nomads and House Qhats are facing their own troubles. A colossal sand storm has set the Winds of Change into motion and reawakened an evil Overlord who's determined to re-establish his ancient dominion.<br><br>
+                            Joining forces with a jaded floating skull named Ozzy and a dreamy Djinni named Istar, the Wizard works to unite the divided factions of Mirage and form a defense against the Overlord's armies. But when new conspiracies emerge and the Wizard's enemies prove to be more elusive than expected, it becomes a race against Time itself to stop Grandfather Spider's schemes from leading to a catastrophic conclusion.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Empyrea</h2>
+                            <p>While the Wizard managed to rescue Bartleby's Eye of History from Grandfather Spider and the Cabal in Mirage, the endeavor came at a heavy cost: Mellori was taken by Grandfather Spider. Spider believes she is the key to unlocking his Chaos Heart from its ancient bonds in the storm-shrouded world of Empyrea.<br><br>
+                            The center of the Spiral, Empyrea, was painstakingly created by Raven to keep the Chaos Heart safe and Spider out. In fact, it was designed to keep pretty much everyone out.<br><br>
+                            The Chaos Heart sits at the center of Empyrea, secured by three great Paradox Chains, and serves as the anchor point to a world comprised of disparate lands inhabited by diverse beings. Raven enveloped Empyrea in a violent storm the likes of which even she cannot pass or see through. You see, Raven has known from the beginning that Spider reclaiming his Chaos Heart would spell an end to the Spiral she lovingly created.<br><br>
+                            As the old adage says, there's no rest for the weary Wizard – especially when the fate of the Spiral is at stake.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Karamelle</h2>
+                            <p>It all begins with an invitation. The Wizard is asked to represent the Arcanum at a Grand Summit to repair their Schism with the Cabal. But is it a trap?<br><br>
+                            Of course not! Indeed, the Summit is hosted on the sweetest world of them all: Karamelle, home of Nana's Olde Fashioned Karamelle Delights, the Spiral's foremost provider of sweets and savories. This is a world of happy Gnomes and Fairies, smiling Hamsters, industrious Nibbelung Moles, and the ever-charming Gobblers.<br><br>
+                            Bad things do not happen on Karamelle. There are no traps, no Gummy Bears going sour, no mysteries or betrayals. And there are certainly no Witches cursing people with their words. No, no, no, nothing ever goes wrong on Karamelle.<br><br>
+                            Karamelle is a world of smiles, of Gumdrop Forests and Licorice Trees, of Chocolate Mines and Soda Lakes. Happy villages stretch from Karamelle City to Gutenstadt and everyone, everywhere, is always singing and whistling while they work.<br><br>
+                            So come to Karamelle. There is nothing to fear.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Lemuria</h2>
+                            <p>A mysterious entity has appeared to the Wizard in the guise of the Old One. Confused and lost, it knows only one thing for certain: it must find the world of Lemuria. The only problem: there is no such world.<br><br>
+                            Investigate the lost fragments of history and uncover the silent crime so monumental it shook the Spiral. And in the process, discover a world of worlds, a mishmash of the strange and familiar maintained by the enigmatic Lemurs. In this place, bears never learned to fight, Manders never learned to serve and Water Moles… well, they actually learned a lot.<br><br>
+                            And it is in this place that heroes are forged. Barbarians triumph in the untamed Mandoria, while polymaths excel in the floating Sky City. Monster hunters are needed to survive the gloomy Night Forest, while the Wildlands are protected by a mysterious violet Ghost.<br><br>
+                            But there is a greater danger than they can know, hidden for centuries. Amidst the jungles and deserts and cities of Lemuria is one last great secret that, if left undiscovered, could unravel Everything.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Novus</h2>
+                            <p>The World Synthesizer was destroyed and then, almost immediately, strange rocks appeared over several worlds, each of them connected to each other through magic and thought. Together, they form Novus, a new world, an unusual world, a gift to the peoples of the Spiral, a gift from… Something.<br><br>
+                            To the people of Marleybone, it grants New Vicorgia – a land of plenty and of hydrants. To the Pingouins of Polaris comes the frozen utopia of La Ville Rose where the fish dance and sing. And to the Monkeys and the Unicorns is granted Puerto Nuovo, rich in art and bananas. But the call of Novus goes beyond just these worlds, beyond these people. Listen carefully and hear in its winds as it whispers for the Wizard.<br><br>
+                            And so you must reach this world through its most accessible shard, floating over the distant realm of Catmandu. Discover weird and wonderful landscapes that bend dreams into truth. Navigate the complex politics of the Spiral empires and prevent this Novus' gifts from being wielded by conquerors and madmen. Master new magicks, unravel conspiracies and preserve Novus from those who would corrupt it.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Wallaru</h2>
+                            <p>Hope and fear collide in Wallaru, a diverse world as expansive and untamable as the mysterious Dreaming at its heart. You must explore the wilds and restore the precarious balance between rival local factions. Can you help Wallaru face its nightmares?</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-content">
+                        <div class="description">
+                            <h2>Darkmoor</h2>
+                            <p>An attack and a tragedy lead you to Darkmoor, a world of monsters and despair. Ruled over by the Parliament of Night, this is the grim home of vampires, witches, werewolves and gargoyles. And in this world's horrid heart, there sits a villain and a secret and a terrible truth you must uncover, even though it will shake the Spiral to its foundation.</p>
+                        </div>
+                        <div class="picture">
+                            <img src="" alt="Placeholder">
+                        </div>
+                    </div>
+                </li>
+                </ul>
+                <aside class="world-nav">
+                    <h3>Worlds</h3>
+                    <ul>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 0)">Wizard City</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 1)">Krokotopia &amp; Selenopolis</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 2)">Marleybone</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 3)">Mooshu</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 4)">Dragonspyre</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 5)">Celestia</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 6)">Grizzleheim &amp; Wintertusk</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 7)">Zafaria</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 8)">Avalon</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 9)">Azteca</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 10)">Khrysalis</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 11)">Polaris</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 12)">Mirage</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 13)">Empyrea</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 14)">Karamelle</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 15)">Lemuria</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 16)">Novus</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 17)">Wallaru</button></li>
+                        <li><button onclick="$('.carousel').slick('slickGoTo', 18)">Darkmoor</button></li>
+                    </ul>
+                </aside>
+            </div>
+            
+        </section>
+        <section id="meet-community">
+            <h2 class="section-title">Meet the Community</h2>
+            <!--
+            Use a background of the w101 community and have a carousel that shows different screenshots of the community and the different activities you can do with them.
+            -->
+        </section>
+        <section id="tech-forge">
+            <h2 class="section-title">Play Now</h2>
+            <!--
+            List the specifications for the game and the different platforms it's available on. Use icons for each platform and make it visually appealing.
+            -->
+        </section>
     </content>
 </body>
 <footer>

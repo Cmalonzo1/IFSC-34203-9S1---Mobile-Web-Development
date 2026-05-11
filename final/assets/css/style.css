@@ -1,7 +1,14 @@
+
+
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Shermlock, Arial, Helvetica, sans-serif;
+}
 *{
+    box-sizing: inherit;
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth;
 }
 
 li{
@@ -10,25 +17,55 @@ li{
     margin: 0;
 }
 
+section{
+    width: 100%;
+    min-height: 100dvh;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    /*position: sticky;*/
+    top: 0;
+    background-color: red;
+}
+
+.section-title{
+    text-align: center;
+    padding: 20px;
+    font-size: 3rem;
+}
+
 header{
     width: 100%;
+    height: 10dvh;
     z-index: 1000;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    position: fixed;
 
     nav{
         display: flex;
+        flex-grow: 1;
         justify-content: space-between;
-        font-size: 20px;
+        font-size: 25px;
+        width: auto;
+        height: 100%;
 
         #nav-left{
             display: flex;
             align-items: center;
             flex-direction: row;
             justify-content: space-evenly;
+            padding: 0px 20px;
 
             #w101-logo{
                 width: 150px;
                 height: auto;
+            }
+
+            li{
+                margin: 0px 10px;
+                color: white;
+                cursor: pointer;
             }
         }
         #nav-right{
@@ -36,13 +73,67 @@ header{
             align-items: center;
             flex-direction: row;
             justify-content: space-evenly;
+            padding: 0px 20px;
+
+            li{
+                margin: 0px 10px;
+                color: white;
+                cursor: pointer;
+            }
         }
     }
 }
 
 content{
     #hero{
-        background-color: red;
+        background: url("../img/w101-banner.jpg");
+
+        p{
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 40px;
+        }
+        #download-button{
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+    #choose-school{
+        display: grid;
+        grid: repeat(3, 1fr) / (repeat(3, 1fr));
+        justify-content: center;
+
+        #schools{
+        display: grid;
+        max-width: 75rem;
+        grid: repeat(3, 1fr) / repeat(3, 1fr);
+        justify-content: center;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+    button {
+        width: 120px;
+        height: auto;
+        background: none;
+        border: none;
+        justify-self: center;
+
+        &:last-child{
+            grid-row: 3;
+            grid-column: 2;
+        }
+    }
     }
 }
 
@@ -53,46 +144,129 @@ footer{
     align-items: center;
 }
 
+.worlds{
+    overflow: scroll;
+    display: flex;
+    max-width: 75rem;
+    max-height: 50rem;
+    margin: 0 auto;
+}
+
 /*
-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+#explore-spiral .worlds {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
+    gap: 24px;
+    align-items: start;
+    padding: 40px 20px;
 }
 
-header nav {
-    background-color: rgba(255, 0, 0, 0.7);
+#explore-spiral .worlds ul.carousel {
+    display: grid;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+#explore-spiral .worlds ul.carousel li {
+    list-style: none;
+}
+
+#explore-spiral .slide-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 28px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 24px;
+    box-shadow: 0 16px 50px rgba(0,0,0,0.15);
+}
+
+#explore-spiral .description h2 {
+    font-size: clamp(1.75rem, 2.2vw, 2.4rem);
+    margin-bottom: 16px;
+}
+
+#explore-spiral .description p {
+    line-height: 1.75;
+    color: #f3f3f3;
+    white-space: pre-wrap;
+}
+
+#explore-spiral .picture {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    justify-content: center;
+}
+
+#explore-spiral .picture img {
     width: 100%;
-    box-sizing: border-box;
+    height: auto;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.08);
 }
 
-header nav #nav-left,
-header nav #nav-right {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    align-items: center;
+#explore-spiral .world-nav {
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 24px;
+    padding: 24px;
 }
 
-header nav li {
-    padding: 0.5rem 1rem;
+#explore-spiral .world-nav h3 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
 }
 
-header nav img {
-    height:75px;
-    width: auto;
+#explore-spiral .world-nav ul {
+    display: grid;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
 }
 
-header nav #download {
-    background-color: yellow;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+#explore-spiral .world-nav button {
+    width: 100%;
+    text-align: left;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#explore-spiral .world-nav button:hover,
+#explore-spiral .world-nav button:focus {
+    background: rgba(255,255,255,0.18);
+    transform: translateX(2px);
+}
+
+@media (max-width: 1024px) {
+    #explore-spiral .worlds {
+        grid-template-columns: 1fr;
+    }
+
+    #explore-spiral .slide-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    #explore-spiral .slide-content {
+        padding: 20px;
+    }
+
+    #explore-spiral .world-nav {
+        padding: 18px;
+    }
 }
 */
+
+
