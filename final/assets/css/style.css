@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.3);
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+
+        #nav-left{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            #w101-logo{
+                width: 150px;
+                height: auto;
+            }
+        }
+        #nav-right{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+content{
+    #hero{
+        background-color: red;
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header nav {
+    background-color: rgba(255, 0, 0, 0.7);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header nav #nav-left,
+header nav #nav-right {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+header nav li {
+    padding: 0.5rem 1rem;
+}
+
+header nav img {
+    height:75px;
+    width: auto;
+}
+
+header nav #download {
+    background-color: yellow;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+*/
