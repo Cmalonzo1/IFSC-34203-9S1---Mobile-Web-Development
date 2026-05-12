@@ -1,7 +1,6 @@
 .video-container {
   position: relative;
   max-width: 720px;
-  margin: 20px auto;
   background: #000;
   border-radius: 10px;
   overflow: hidden;

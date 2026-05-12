@@ -4,23 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/javascript.js"></script>
     <title>Video</title>
+    <script src="assets/js/javascript.js" defer></script>
 </head>
 <body>
     <div class="video-container">
-  <video id="myVideo" src="https://thomaswallace.net/demos/video/hudson-shelter-falls.mp4"></video>
+      <video id="myVideo" src="https://thomaswallace.net/demos/video/hudson-shelter-falls.mp4"></video>
 
-  <div class="controls">
-    <button id="playPause" aria-label="Play">▶️</button>
-    <input type="range" id="seek" value="0" step="0.01" aria-label="Seek bar">
-    <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+      <div class="controls">
+          <button id="playPause" aria-label="Play">▶️</button>
+          <input type="range" id="seek" value="0" step="0.01" aria-label="Seek bar">
+          <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
 
-    <button id="muteToggle" aria-label="Mute">🔊</button>
-    <input type="range" id="volume" min="0" max="1" step="0.01" value="1" aria-label="Volume slider">
+          <button id="muteToggle" aria-label="Mute">🔊</button>
+          <input type="range" id="volume" min="0" max="1" step="0.01" value="1" aria-label="Volume slider">
 
-    <button id="fullscreenToggle" aria-label="Toggle fullscreen">⛶</button>
-  </div>
-</div>
+          <button id="fullscreenToggle" aria-label="Toggle fullscreen">⛶</button>
+      </div>
+    </div>
+    <div class="audio-container">
+      <audio controls="controls">
+        <source src="assets/videos/thunder.ogg">
+        <source src="assets/videos/thunder.mp3">
+        <source src="assets/videos/thunder.wav">
+      </audio>
+    </div>
+    <a href="../index.html">Homepage</a>
 </body>
 </html>

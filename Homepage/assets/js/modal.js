@@ -1,6 +1,6 @@
         // Get modal and link elements
-        const modal = document.getElementById('gridGardenModal');
-        const link = document.getElementById('grid-garden-link');
+        const modal = document.getElementById('modal');
+        const link = document.getElementById('content-link');
         const closeBtn = document.querySelector('.close');
 
         // Open modal when clicking Grid Garden link
