@@ -1,14 +1,20 @@
+:root {
+    --wiz-blue: #0D1440;
+    --wiz-gold: #C5A028;
+    --wiz-parchment: #F4EBD0;
+    --wiz-bg-dark: rgba(0, 0, 0, 0.6);
+}
 
-
-html{
+html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: Shermlock, Arial, Helvetica, sans-serif;
+    font-family: 'Shermlock', Arial, sans-serif;
 }
-*{
+
+*, *::before, *::after {
     box-sizing: inherit;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 li{
@@ -21,17 +27,18 @@ section{
     width: 100%;
     min-height: 100dvh;
     display: inline-block;
-    background-size: cover;
-    background-position: center;
-    /*position: sticky;*/
-    top: 0;
-    background-color: red;
 }
 
-.section-title{
+.section-title {
+    position: relative;
+    display: block;
+    width: 100%;
     text-align: center;
-    padding: 20px;
     font-size: 3rem;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+    z-index: 2;
 }
 
 header{
@@ -41,8 +48,11 @@ header{
     background-color: rgba(0,0,0,0.5);
     backdrop-filter: blur(5px);
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    nav{
+    nav {
         display: flex;
         flex-grow: 1;
         justify-content: space-between;
@@ -86,12 +96,12 @@ header{
 
 content{
     #hero{
-        background: url("../img/w101-banner.jpg");
-
+        background: url("../img/w101-banner.jpg") no-repeat center center/cover;
+        
         p{
             position: absolute;
             top: 75%;
-            left: 50%;
+            left: 75%;
             transform: translate(-50%, -50%);
             color: white;
             font-size: 40px;
@@ -99,7 +109,7 @@ content{
         #download-button{
             position: absolute;
             top: 80%;
-            left: 50%;
+            left: 75%;
             transform: translate(-50%, -50%);
             background-color: #007bff;
             color: white;
@@ -109,31 +119,34 @@ content{
             cursor: pointer;
         }
     }
-    #choose-school{
+    #choose-school {
+        background: url("../img/gamma-room.webp") no-repeat center center/cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 110dvh;
+    }
+    #choose-school #schools {
         display: grid;
-        grid: repeat(3, 1fr) / (repeat(3, 1fr));
-        justify-content: center;
-
-        #schools{
-        display: grid;
-        max-width: 75rem;
-        grid: repeat(3, 1fr) / repeat(3, 1fr);
-        justify-content: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         gap: 30px;
         padding: 40px 20px;
+        max-width: 75rem;
+        justify-items: center;
+        align-items: center;
     }
-    button {
+    #choose-school button {
         width: 120px;
         height: auto;
         background: none;
         border: none;
         justify-self: center;
-
-        &:last-child{
-            grid-row: 3;
-            grid-column: 2;
-        }
     }
+    #choose-school button:last-child {
+        grid-row: 3;
+        grid-column: 2;
     }
 }
 
@@ -152,121 +165,177 @@ footer{
     margin: 0 auto;
 }
 
-/*
-#explore-spiral .worlds {
-    display: grid;
-    grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
-    gap: 24px;
-    align-items: start;
-    padding: 40px 20px;
-}
-
-#explore-spiral .worlds ul.carousel {
-    display: grid;
-    gap: 24px;
-    padding: 0;
-    margin: 0;
-}
-
-#explore-spiral .worlds ul.carousel li {
-    list-style: none;
-}
-
-#explore-spiral .slide-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    padding: 28px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 24px;
-    box-shadow: 0 16px 50px rgba(0,0,0,0.15);
-}
-
-#explore-spiral .description h2 {
-    font-size: clamp(1.75rem, 2.2vw, 2.4rem);
-    margin-bottom: 16px;
-}
-
-#explore-spiral .description p {
-    line-height: 1.75;
-    color: #f3f3f3;
-    white-space: pre-wrap;
-}
-
-#explore-spiral .picture {
+#explore-spiral {
+    background: url("../img/ravynwood.webp") no-repeat center center/cover;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+
+    .worlds-container {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 0;
+        width: 90%;
+        max-width: 1000px; 
+        margin: 0 auto;
+        border: 3px solid #C5A028;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        min-width: 0;
+
+        .world-nav {
+            background: rgba(0, 0, 0, 0.4);
+            border-right: 2px solid #C5A028;
+            height: 650px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+
+            h3 {
+                color: var(--wiz-gold);
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 1.5rem;
+            }
+
+            .world-list {
+                overflow-y: auto;
+                padding-right: 10px;
+                flex-grow: 1;
+
+                &::-webkit-scrollbar { width: 5px; }
+                &::-webkit-scrollbar-thumb { background: var(--wiz-gold); }
+
+                li {
+                    margin-bottom: 5px;
+
+                    .world-select {
+                        width: 100%;
+                        background: none;
+                        border: 1px solid transparent;
+                        color: var(--wiz-parchment);
+                        padding: 12px;
+                        text-align: left;
+                        cursor: pointer;
+                        font-family: inherit;
+                        transition: 0.2s;
+
+                        &:hover, &.is-active {
+                            background: rgba(255, 215, 0, 0.2);
+                            color: var(--wiz-gold);
+                            border-color: var(--wiz-gold);
+                        }
+                    }
+                }
+            }
+        }
+
+        #spiral-carousel {
+            height: 550px;
+
+            .splide__track {
+                height: 100% !important; /* */
+            }
+
+            .slide-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                height: 550px;
+                padding: 40px;
+                gap: 30px;
+
+                .description {
+                    overflow-y: auto;
+                    padding-right: 15px;
+
+                    &::-webkit-scrollbar { width: 5px; }
+                    &::-webkit-scrollbar-thumb { background: var(--wiz-gold); border-radius: 10px; }
+
+                    h2 {
+                        color: var(--wiz-gold);
+                        font-size: 2rem;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        color: white;
+                        line-height: 1.6;
+                        font-size: 0.95rem;
+                        max-width: 25rem;
+                    }
+                }
+
+                .picture {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 100%;
+                        height: 300px;
+                        object-fit: cover;
+                        border: 2px solid var(--wiz-gold);
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
 }
 
-#explore-spiral .picture img {
-    width: 100%;
-    height: auto;
-    max-height: 360px;
-    object-fit: cover;
-    border-radius: 24px;
-    background: rgba(255,255,255,0.08);
+#meet-community {
+    background: url("../img/commons.webp") no-repeat center center/cover;
 }
 
-#explore-spiral .world-nav {
-    background: rgba(0,0,0,0.35);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 24px;
-    padding: 24px;
+@media (max-width: 900px) {
+    #explore-spiral {
+        .worlds-container {
+            grid-template-columns: 1fr; /* STACKED: Sidebar moves to top */
+            
+            .world-nav {
+                height: auto;
+                max-height: 200px; /* Constrain nav height on mobile */
+                border-right: none;
+                border-bottom: 2px solid var(--wiz-gold);
+                
+                .world-list {
+                    display: flex; /* Make worlds scroll horizontally on small screens */
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    padding-bottom: 10px;
+                    li { white-space: nowrap; margin-right: 15px; }
+                }
+            }
+
+            #spiral-carousel {
+                height: auto;
+                .slide-content {
+                    grid-template-columns: 1fr; /* Stack text and image vertically */
+                    height: auto;
+                    padding: 20px;
+                    .description p { 
+                        max-width: 100%; 
+                    }
+                }
+            }
+        }
+    }
 }
 
-#explore-spiral .world-nav h3 {
-    margin-bottom: 20px;
-    font-size: 1.6rem;
-}
-
-#explore-spiral .world-nav ul {
-    display: grid;
-    gap: 12px;
-    padding: 0;
-    margin: 0;
-}
-
-#explore-spiral .world-nav button {
-    width: 100%;
-    text-align: left;
-    padding: 14px 18px;
-    border: none;
-    border-radius: 16px;
-    background: rgba(255,255,255,0.08);
-    color: #fff;
-    font-family: inherit;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: background 0.2s ease, transform 0.2s ease;
-}
-
-#explore-spiral .world-nav button:hover,
-#explore-spiral .world-nav button:focus {
-    background: rgba(255,255,255,0.18);
-    transform: translateX(2px);
-}
-
-@media (max-width: 1024px) {
-    #explore-spiral .worlds {
-        grid-template-columns: 1fr;
+@media (max-width: 768px) {
+    #choose-school #schools {
+        gap: 20px;
+        button {
+            width: 90px; /* Slightly smaller for mobile screens */
+            }
+        }
     }
 
-    #explore-spiral .slide-content {
-        grid-template-columns: 1fr;
+@media (max-width: 500px) {
+    header nav {
+        font-size: 18px; /* Smaller text for very small screens */
     }
 }
-
-@media (max-width: 640px) {
-    #explore-spiral .slide-content {
-        padding: 20px;
-    }
-
-    #explore-spiral .world-nav {
-        padding: 18px;
-    }
-}
-*/
-
-
